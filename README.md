@@ -8,15 +8,11 @@
   <a href="mailto:antoine.2vey@gmail.com">
     <img src="https://img.shields.io/badge/Email-antoine.2vey%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white" alt="Email" />
   </a>
-  <!-- TODO: replace # with your real URLs -->
-  <a href="#">
+  <a href="https://www.linkedin.com/in/antoine-de-veyrac-31b467112/">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/X-Follow-000000?style=flat&logo=x&logoColor=white" alt="X" />
-  </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Website-Visit-4C1?style=flat&logo=googlechrome&logoColor=white" alt="Website" />
+  <a href="https://antoinedeveyrac.fr">
+    <img src="https://img.shields.io/badge/Website-antoinedeveyrac.fr-4C1?style=flat&logo=googlechrome&logoColor=white" alt="Website" />
   </a>
 </p>
 
