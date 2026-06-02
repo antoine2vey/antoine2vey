@@ -22,6 +22,11 @@ I build full-stack products end-to-end — typed APIs, a Postgres data layer, an
 React Native app on top. I care about correctness: strong types, explicit error handling,
 and code that's still readable six months later.
 
+I'm especially drawn to **system design** — how the pieces fit, where the boundaries go, and
+how a service behaves under load and over time. I like reasoning about data models, failure
+modes, observability, and the latency/consistency trade-offs that decide whether an
+architecture holds up in production (the Lily breakdown below is where I get to do that).
+
 **🟢 Open to opportunities** — full-stack / backend roles. The fastest way to reach me is
 [email](mailto:antoine.2vey@gmail.com).
 
