@@ -36,6 +36,39 @@ spanning a backend API, a React Native/Expo mobile app, a Next.js marketing site
 dashboard, and a pgvector knowledge base powering RAG. iOS Live Activities, OTA updates, and
 OpenTelemetry tracing in production.
 
+<details>
+<summary><b>🧩 System design — how Lily is built</b></summary>
+
+<br>
+
+**One language, end to end.** Lily is a single TypeScript monorepo (Bun + Turborepo) where
+seven packages — `api`, `db`, `shared`, `app`, `web`, `admin`, `mcp`, `knowledge-db` — share
+types across the wire. A change to a database column or an API contract surfaces as a compile
+error in the mobile app before it ever ships. `bun run tsc` runs the full project-reference
+graph in CI and as a pre-push hook, so the type boundary is enforced, not aspirational.
+
+**An effect-system backend, not a framework.** The API is built on Effect — every handler is
+a typed effect with its dependencies (database, auth, AI, telemetry) injected through a single
+`AppLive` layer at the root. Errors are values: each failure mode is a `Schema.TaggedError`
+threaded through the type system and handled by tag, so there are no unhandled exceptions and
+no silent `catch`. Data access goes through a repository layer over Drizzle + Postgres, which
+keeps SQL at the edges and business logic pure and testable — the test suite mocks at the
+repository seam, not the database, and runs in milliseconds.
+
+**Retrieval-augmented plant care.** Care recommendations are grounded in a dedicated
+`knowledge-db` package: a pgvector store of horticultural knowledge queried by semantic
+similarity, exposed to the model through an `@effect/ai` + `@effect/rpc` MCP server. The LLM
+answers from retrieved, citable context rather than from memory alone — which is what keeps
+plant-care advice accurate instead of confidently wrong.
+
+**Built to be operated.** Production traffic is traced end to end with OpenTelemetry, exported
+to Honeycomb, so a slow request can be followed across the API, the database, and the AI calls
+in a single waterfall. The mobile app ships iOS Live Activities (APNs push-to-start) for live
+watering reminders and updates over the air via EAS, with a fingerprint-based policy that keeps
+JS-only changes off the App Store review queue while still pinning native builds correctly.
+
+</details>
+
 ### 🛠️ Tech stack
 
 **Languages**
