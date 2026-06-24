@@ -32,7 +32,7 @@ architecture holds up in production (the Lily breakdown below is where I get to 
 
 ### 🌱 What I'm building
 
-**Lily** _(private — happy to demo)_ — a plant care app. A TypeScript monorepo (Bun + Effect)
+**[Lily](https://github.com/antoine2vey/lily)** ([withlily.app](https://withlily.app)) — a plant care app. A TypeScript monorepo (Bun + Effect)
 spanning a backend API, a React Native/Expo mobile app, a Next.js marketing site, an admin
 dashboard, and a pgvector knowledge base powering RAG. iOS Live Activities, OTA updates, and
 OpenTelemetry tracing in production.
@@ -104,7 +104,9 @@ keeps JS-only changes off the App Store review queue while still pinning native 
 
 | Project | What it is | Stack |
 | --- | --- | --- |
+| **[Lily](https://github.com/antoine2vey/lily)** ([site](https://withlily.app)) | Plant care app — TypeScript monorepo with a typed Effect API, RN/Expo app, and a pgvector RAG knowledge base (system design above) | TypeScript · Effect · Bun · Postgres · React Native |
 | **[moneymatchr](https://github.com/antoine2vey/moneymatchr)** ⭐ | EVM-based money-match / wagering system — smart contracts + app ([client](https://github.com/antoine2vey/moneymatchr-app)) | TypeScript · Solidity · EVM |
+| **[dofus-breeding](https://github.com/antoine2vey/dofus-breeding)** | Dofus dragodinde breeding tracker — simulates fuel/stat ticks and pings Discord when goals are hit | TypeScript · Effect · SQLite · React |
 | **[smashpros](https://github.com/antoine2vey/smashpros)** | Tournament platform backend with a [React Native client](https://github.com/antoine2vey/smashpros-app) | Node · GraphQL · Prisma · Postgres · MongoDB |
 | **[correctr](https://github.com/antoine2vey/correctr)** | Right-click autocorrect for any text input | TypeScript |
 | **[portfolio](https://github.com/antoine2vey/portfolio)** | My personal site | Next.js · Tailwind |
